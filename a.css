@@ -1,11 +1,12 @@
 :root {
   --dark: #091119;
+  --dark2: #192139;
   --light: #fffdff;
   --light-50: #fffdff80;
 }
 body {
   user-select: none;
-  background-color: var(--dark);
+  background: var(--dark);
   color: var(--light);
   font-family: "Roboto Mono", monospace;
   margin: 0;
@@ -16,7 +17,7 @@ body {
   top: 0;
   right: 0;
   width: 100vw;
-  background-color: var(--dark);
+  background: var(--dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,6 +25,8 @@ body {
   padding-top: 4vw;
   padding-bottom: 4vw;
   border-bottom: 0.3vw solid var(--light-50);
+  z-index: 2;
+  box-shadow: var(--dark) 0px 0px 20vw;
 }
 h1 {
   font-size: 12vw;
@@ -34,6 +37,12 @@ h2 {
 }
 h3 {
   font-size: 5vw;
+}
+h6 {
+  font-size: 3vw;
+  opacity: 75%;
+  margin-top: -5vw;
+  font-weight: 300;
 }
 p,
 a {
@@ -46,14 +55,38 @@ a {
 }
 .home {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+.story {
+  margin: 8vw;
+  line-height: 7vw;
 }
 .characters {
   display: flex;
   justify-content: center;
 }
+.characters .loading {
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
 .characters img {
   width: 80vw;
+  z-index: 1;
+  background: var(--dark);
+  margin-bottom: 20vw;
+}
+.episodes {
+  display: flex;
+  flex-direction: column;
+}
+.episodes a {
+  background: var(--dark2);
+  margin: 2vw;
+  padding: 4vw;
 }
