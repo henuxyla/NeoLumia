@@ -11,6 +11,7 @@ body {
   font-family: "Roboto Mono", monospace;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .nav {
   position: fixed;
@@ -60,9 +61,9 @@ a {
   justify-content: center;
   height: 100vh;
 }
-.story {
-  margin: 8vw;
-  line-height: 7vw;
+.home img {
+  width: 100vw;
+  filter: saturate(0.5);
 }
 .characters {
   display: flex;
@@ -89,4 +90,26 @@ a {
   background: var(--dark2);
   margin: 2vw;
   padding: 4vw;
+}
+.story {
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-bottom: 28vw;
+  line-height: 7vw;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32vw;
+  width: 100vw;
+  box-shadow: var(--dark) 0px 0px 20vw;
+  font-weight: bolder;
+}
+.bottom-nav a,
+.bottom-nav p {
+  color: var(--dark);
 }
